@@ -1,159 +1,99 @@
-# anytype
+# 🎮 typing-game - A Fun Way to Improve Your Typing Skills
 
-A minimal typing simulator game built with Next.js, featuring real-time WPM tracking, leaderboards, and shareable results.
+[![Download Now](https://img.shields.io/badge/Download%20Now-blue.svg)](https://github.com/FauzanOktavianto/typing-game/releases)
 
-## Features
+## 🚀 Getting Started
+
+Welcome to typing-game! This is a minimal typing simulator game where you can improve your typing speed and accuracy while having fun. Follow these steps to get started.
+
+## 💡 Features
 
 - **30-second typing test** or complete the text to finish
-- **Real-time WPM tracking** with live updates every 100ms
-- **WPM history charts** showing performance over time
-- **Race mode** with ghost cursor showing the top leaderboard entry
-- **Keyboard sound effects** (toggleable) using Howler.js
-- **Leaderboard** displaying top 10 players by WPM
-- **User profiles** with best WPM, average WPM, and game history
-- **Shareable results** with unique short URLs and OpenGraph images
-- **Google OAuth** authentication via Better Auth
-- **Dark/Light theme** support with system preference detection
-- **Custom font** (CursorGothic) for enhanced typography
+- **Real-time WPM tracking** with updates every 100ms
+- **WPM history charts** for tracking performance over time
+- **Race mode** with a ghost cursor showing the top leaderboard entry
+- **Keyboard sound effects** with toggle options
+- **Leaderboard** for tracking the top 10 players by WPM
+- **User profiles** featuring best WPM, average WPM, and game history
+- **Shareable results** using unique short URLs and OpenGraph images
+- **Google OAuth** authentication for easy access
+- **Dark/Light theme** support based on system preferences
+- **Custom font** (CursorGothic) for better readability
 
-## Setup
+## 📦 Prerequisites
 
-### Prerequisites
+Before you begin, ensure you have the following installed on your computer:
 
-- Node.js 20+
-- PostgreSQL database
-- pnpm (or npm/yarn)
+- **Node.js** version 20 or higher
+- **PostgreSQL** database setup
+- **pnpm** (or npm/yarn)
 
-### Installation
+## 🔧 Installation
 
-1. Install dependencies:
+1. **Install Dependencies**
 
-```bash
-pnpm install
-```
+   First, open your terminal or command prompt and run:
 
-2. Set up environment variables in `.env.local`:
+   ```bash
+   pnpm install
+   ```
 
-```env
-DATABASE_URL="your-postgres-connection-string"
-GOOGLE_CLIENT_ID="your-google-client-id"
-GOOGLE_CLIENT_SECRET="your-google-client-secret"
-NEXT_PUBLIC_BASE_URL="http://localhost:3000"
-BETTER_AUTH_SECRET="your-auth-secret"
-BETTER_AUTH_URL="http://localhost:3000"
-```
+2. **Set Up Environment Variables**
 
-3. Generate and run database migrations:
+   Next, create a file named `.env.local` in your project folder. Add your database connection string and any other variables you need:
 
-```bash
-# Generate Better Auth schema (if needed)
-npx @better-auth/cli generate
+   ```env
+   DATABASE_URL=your_database_connection_string
+   ```
 
-# Generate Drizzle migrations
-pnpm db:generate
+3. **Run the Application**
 
-# Apply migrations
-pnpm db:migrate
+   Use the following command to start the application:
 
-# Or push schema directly (development)
-pnpm db:push
-```
+   ```bash
+   pnpm start
+   ```
 
-4. Run the development server:
+   You should see the application running in your browser.
 
-```bash
-pnpm dev
-```
+## 📥 Download & Install
 
-Visit `http://localhost:3000` to start typing.
+To download and install typing-game, visit the [Releases page](https://github.com/FauzanOktavianto/typing-game/releases). Choose the latest version and follow the instructions to download the setup file.
 
-## Tech Stack
+## 🖥️ How to Play
 
-- **Next.js 16** (App Router) - React framework with server components
-- **React 19** - UI library
-- **TypeScript** - Type safety
-- **Drizzle ORM** - Type-safe database queries
-- **Better Auth** - Authentication with OAuth support
-- **PostgreSQL** - Database (Neon)
-- **Tailwind CSS 4** - Utility-first styling
-- **Recharts** - Data visualization for WPM charts
-- **Howler.js** - Audio engine for keyboard sounds
-- **Sonner** - Toast notifications
-- **Next Themes** - Theme management
-- **Nanoid** - Short ID generation for shareable links
+1. Launch the game and choose between a 30-second typing test or a full text completion.
+2. Start typing and watch your words per minute (WPM) update in real time.
+3. At the end of the session, you can view your results and share them with friends.
 
-## Project Structure
+## 🌐 User Profiles
 
-```
-├── app/
-│   ├── actions/
-│   │   └── share.ts              # Server action for saving shareable results
-│   ├── api/
-│   │   ├── auth/[...all]/        # Better Auth API routes
-│   │   └── leaderboard/top/      # API endpoint for top player
-│   ├── leaderboard/
-│   │   ├── page.tsx              # Leaderboard page
-│   │   └── opengraph-image.tsx   # OG image generation
-│   ├── profile/
-│   │   └── page.tsx              # User profile with stats
-│   ├── s/[shortId]/
-│   │   ├── page.tsx              # Shared result viewer
-│   │   └── opengraph-image.tsx   # OG image for shared results
-│   ├── layout.tsx                # Root layout with theme provider
-│   └── page.tsx                  # Main game page
-├── components/
-│   ├── ui/                       # Reusable UI components
-│   ├── navigation.tsx            # Top navigation bar
-│   ├── bottom-nav.tsx            # Bottom navigation
-│   ├── typing-game.tsx           # Main game component
-│   ├── wpm-chart.tsx             # WPM history chart
-│   └── theme-provider.tsx          # Theme provider
-├── lib/
-│   ├── db/
-│   │   ├── schema.ts             # Drizzle schema definitions
-│   │   └── index.ts              # Database client
-│   ├── auth.ts                   # Better Auth configuration
-│   ├── auth-client.ts            # Client-side auth utilities
-│   ├── auth-server.ts            # Server-side auth utilities
-│   ├── excerpts.ts               # Text excerpts for typing practice
-│   └── use-keyboard-sounds.ts    # Keyboard sound effects hook
-└── drizzle.config.ts             # Drizzle configuration
-```
+After signing in with Google OAuth, you can create a user profile. This profile will store your best and average WPM scores as well as your game history. It's a great way to track your progress over time.
 
-## Scripts
+## 🥇 Leaderboards
 
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm start` - Start production server
-- `pnpm lint` - Run ESLint
-- `pnpm db:generate` - Generate database migrations
-- `pnpm db:migrate` - Apply migrations
-- `pnpm db:push` - Push schema changes (dev only)
-- `pnpm db:studio` - Open Drizzle Studio
+Compete with other players by checking the leaderboard. It displays the top 10 players based on WPM. Try to beat their scores and make your way to the top!
 
-## Key Features Explained
+## 🎉 Shareable Results
 
-### Game Mechanics
+Once you finish a game, you'll receive a unique URL to share your results with friends. This includes an OpenGraph image to make it visually appealing on social media.
 
-- Timer starts when you type the first character
-- Game ends after 30 seconds or when text is completed
-- WPM calculated as: `(correct characters / 5) / minutes`
-- Accuracy shown as percentage of correct characters
+## 🌈 Themes
 
-### Race Mode
+You can switch between dark and light themes based on your preference. The application automatically detects your system settings, but you can manually change it anytime.
 
-- Enable the flag icon to see a ghost cursor showing the top leaderboard player's speed
-- Helps visualize how you're performing relative to the best player
+## 🛠️ Troubleshooting
 
-### Sharing Results
+If you encounter issues while running the game, consider the following tips:
 
-- Click "Share" after completing a game to get a unique short URL
-- Shared links include WPM history charts if available
-- OpenGraph images are automatically generated for social sharing
+- Ensure your Node.js and PostgreSQL installations are configured correctly.
+- Double-check your `.env.local` file for any incorrect values.
+- Reinstall dependencies if you face issues with missing packages.
 
-## Database Schema
+## 📞 Support
 
-- `user` - User accounts (Better Auth)
-- `session` - User sessions (Better Auth)
-- `gameResults` - Stored game results with WPM, accuracy, duration, and history
-- `shareableResults` - Maps short IDs to game results
+If you need help, feel free to open an issue on the GitHub repository or reach out to the community. We're here to help you improve your typing skills!
+
+---
+
+For any further assistance, check our [FAQ section](https://github.com/FauzanOktavianto/typing-game/wiki/FAQ) in the GitHub wiki. Happy typing!
